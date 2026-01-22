@@ -1,57 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simple Shop — Frontpage</title>
-  <style>
-    /* Basic reset */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:#f7f7fb;color:#222}
+  <title>Maximall Online Shop</title>
+   
+  <link rel="stylesheet" href="index.css">
 
-    /* Header / nav */
-    header{background:#fff;border-bottom:1px solid #e6e6ef;padding:18px 24px;position:sticky;top:0;z-index:20}
-    .container{max-width:1100px;margin:0 auto}
-    .nav{display:flex;align-items:center;gap:16px}
-    .brand{font-weight:700;font-size:20px;color:#111}
-    .search{flex:1;display:flex;justify-content:center}
-    .search input{width:60%;max-width:500px;padding:10px 12px;border-radius:8px;border:1px solid #ddd}
-    nav ul{list-style:none;display:flex;gap:12px;align-items:center}
-    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:#333;font-weight:600}
-    nav a:focus{outline:2px solid #cfe8ff}
-
-    /* Disabled-tab style */
-    .disabled{opacity:0.5;cursor:not-allowed;pointer-events:none}
-    .disabled[aria-disabled="true"]{ /* explicit accessible hook */ }
-
-    /* Hero */
-    .hero{padding:48px 0;background:linear-gradient(180deg,#ffffff 0%,#fbfbff 100%)}
-    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-    .hero h1{font-size:34px;margin-bottom:14px}
-    .hero p{color:#555;margin-bottom:18px}
-    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:#111;color:#fff;text-decoration:none;font-weight:700}
-
-    /* Products */
-    .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:30px}
-    .card{background:#fff;border-radius:12px;padding:14px;border:1px solid #eef0f8}
-    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
-    .card h4{font-size:16px;margin-bottom:6px}
-    .card p{color:#666;font-size:14px;margin-bottom:12px}
-    .card .buy{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;background:#0b76ef;color:#fff;font-weight:700}
-
-    /* Footer */
-    footer{padding:26px 0;margin-top:40px;color:#666;font-size:14px}
-
-    /* Responsive */
-    @media (max-width:880px){
-      .hero-grid{grid-template-columns:1fr}
-      .search input{width:100%}
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">SimpleShop</div>
+    <body class="home-page">
 
-      <div
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <div class="header-box">
+            <header class="main-header">
+                <img src="images/maximall.jpg" alt="Maximall logo" class="logo-img">
+            </header>
+    </div>
+    <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search ...">
+</div>
+      <nav class="horizontal-menu">          
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sneakers.html">Sneakers</a></li>
+                        <li><a  href="phones.html">Smartphones</a></li>
+                        <li><a  href="appliances.html">Home Appliances</a></li>
+                        <li><a  href="household.html">Household</a></li>
+                        <li><a  href="farm.html">Office and Farm Use </a></li>
+                        <li><a  href="game.html">Gaming</a></li>
+      </nav>
+      
+    <aside class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </aside>            
+<main>
+    </h1>
+ <div class="product-container">
+
+    <div class="product-card">
+        <img src="images/dealoftheday.jpg" alt="Deal of The Day">
+        <h3>Deal of The Day</h3>
+        <button>View</button>
+    </div>
+
+    <div class="product-card">
+        <img src="images/weekdeal.jpg" alt="Weekly Deal">
+        <h3>Deals of The Week</h3>
+        <button>View</button>
+    </div>
+
+   
+    <div class="product-card">
+        <img src="images/xmasoffer.jpg" alt="Christmas Offer">
+        <h3>XMAS Offers</h3>
+        <button>View</button>
+    </div>
+
+    <!-- Laptops -->
+    <div class="product-card">
+        <img src="images/specialoffer.jpg" alt="Special Offer">
+        <h3>Special Offers</h3>
+        <button>View</button>
+    </div>
+
+    <!-- Fridges -->
+    <div class="product-card">
+        <img src="images/gaming.jpg" alt="gaming">
+        <h3>Game Store</h3>
+    
+        <button>View</button>
+    </div>
+
+    <!-- Clothing - Shirt -->
+    <div class="product-card">
+        <img src="images/shirt.webp" alt="Shirt">
+        <h3>Women Clothing</h3>
+
+        <button>View</button>
+    </div>
+
+    <!-- Clothing - Trousers -->
+    <div class="product-card">
+        <img src="images/shirt.webp" alt="Clothing">
+        <h3>Men Clothing </h3>
+        <button>View</button>
+    </div>
+ <div class="product-card">
+        <img src="images/computer.jpg" alt="Computing">
+        <h3> Computers & Devices </h3>
+        <button>View</button>
+    </div>
+</main>
+<script>
+    const toggle=document.querySelector('.sidebar-toggle');
+    const sidebar=document.querySelector('.sidebar');
+    toggle.addEventListener('click',()=>{
+        if(sidebar.stle.display=== 'flex'){
+            sidebar.style.display='none';
+        }else{
+            sidebar.style.display='flex';
+        }
+        });
+</script>
+</body>
+<footer>
+    <p>&copy; 2026 Maximall Online Shop. All rights reserved.</p>
+</footer>
+</html>
+
+
+  
